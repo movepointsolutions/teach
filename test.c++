@@ -12,11 +12,8 @@ struct model_type : public teach::model<std::string, std::string>
 	}
 };
 
-std::unique_ptr<model_type> mptr(new model_type());
-
 typedef teach::algorithm<std::unique_ptr<model_type>> algorithm_type;
-
-algorithm_type algorithm(std::move(mptr));
+algorithm_type algorithm(std::unique_ptr<model_type>(new model_type()));
 
 int main()
 {
