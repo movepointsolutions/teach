@@ -15,7 +15,8 @@ int main()
 			std::cout << v << " (" << k << ")" << std::endl;
 		}
 	};
-	teach::algorithm<std::unique_ptr<model_type>> algorithm;
+	std::unique_ptr<model_type> mptr(new model_type());
+	teach::algorithm<std::unique_ptr<model_type>> algorithm(std::move(mptr));
 	model_type *model = algorithm.model().get();
 	algorithm.transport(key, value);
 }
