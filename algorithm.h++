@@ -4,12 +4,13 @@
 namespace teach
 {
 
-template <class Model>
+template <class Mptr>
 class algorithm
 {
 public:
-	typedef typename Model::key_type key_type;
-	typedef typename Model::value_type value_type;
+	typedef typename Mptr::element_type model_type;
+	typedef model_type::key_type key_type;
+	typedef model_type::value_type value_type;
 public:
 #ifdef TEACH_DEBUG
 	virtual Value get(const Key &) = 0;
