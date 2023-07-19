@@ -11,7 +11,9 @@ public:
 	typedef typename Model::key_type key_type;
 	typedef typename Model::value_type value_type;
 public:
-	//virtual Value get(const Key &) = 0;
+#ifdef TEACH_DEBUG
+	virtual Value get(const Key &) = 0;
+#endif // TEACH_DEBUG
 	void transport(const key_type &, const value_type &);
 };
 

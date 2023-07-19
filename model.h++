@@ -11,7 +11,9 @@ public:
 	typedef Key key_type;
 	typedef Value value_type;
 public:
-	//virtual Value get(const Key &) = 0;
+#ifdef TEACH_DEBUG
+	virtual Value get(const Key &) = 0;
+#endif // TEACH_DEBUG
 	virtual void emit(const Key &, const Value &) = 0;
 };
 
