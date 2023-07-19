@@ -8,6 +8,9 @@ template <class Key, class Value>
 class model
 {
 public:
+	typedef Key key_type;
+	typedef Value value_type;
+public:
 	//virtual Value get(const Key &) = 0;
 	virtual void emit(const Key &, const Value &) = 0;
 };
