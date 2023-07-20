@@ -1,2 +1,19 @@
+teach
+=====
+
+teach is a Model/Algorithm framework.
+You start with an algorithm.
+The algorithm has a connected model.
+Model emits key/value pairs to business logic.
+You could have a models tree, represented with a root model.
+Algorithm is connected to a single model.
+More exactly, the single teach::algorithm template parameter
+is type of pointer to model.
+
+To have models emit and thus start business logic,
+you call algorithm::transport(k, v).
+
+For exact idea, look at the sample code.
+
 To see that test.c++ works:
 $ mkdir build && cd build && cmake .. && make && ./test
