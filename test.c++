@@ -19,6 +19,5 @@ int main()
 {
 	auto key = "La Biznas";
 	auto value = "Hola";
-	//model_type *model = algorithm.model().get();
 	algorithm.transport(key, value);
 }
