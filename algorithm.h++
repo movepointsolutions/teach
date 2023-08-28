@@ -13,6 +13,7 @@ public:
 	typedef typename model_type::key_type key_type;
 	typedef typename model_type::value_type value_type;
 public:
+	algorithm(const Mptr &_mptr) : mptr(_mptr) {}
 	algorithm(Mptr &&_mptr) : mptr(std::move(_mptr)) {}
 #ifdef TEACH_DEBUG
 	virtual Value get(const Key &) = 0;
